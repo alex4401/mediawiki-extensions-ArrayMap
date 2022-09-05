@@ -1,0 +1,45 @@
+{
+	"name": "ArrayMap",
+	"version": "5.4",
+
+	"author": [
+		"alex4401",
+		"Yaron Koren",
+		"..."
+	],
+	"url": "https://github.com/alex4401/mediawiki-extensions-ArrayMap",
+	"descriptionmsg": "arraymap-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "parserhook",
+
+	"requires": {
+		"MediaWiki": ">= 1.37.0",
+		"platform": {
+			"php": ">= 7.4"
+		}
+	},
+
+	"MessagesDirs": {
+		"ArrayMap.class": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"ArrayMapMagic": "includes/ArrayMapMagic.php"
+	},
+
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\ArrayMap\\": "includes/"
+	},
+	
+	"HookHandlers": {
+		"Hooks": {
+			"class": "MediaWiki\\Extension\\ArrayMap\\Hooks"
+		}
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "Hooks"
+	},
+
+	"manifest_version": 2
+}
